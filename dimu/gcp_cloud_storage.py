@@ -22,6 +22,7 @@ def convert_pdfs_to_pngs(s_bkt, s_path, d_bkt, d_path, zpad: int = 4):
                     suffix = str(i).zfill(zpad)
                     ofname = d_path + fname + "-" + suffix + ".png"
                     oblob = d_bucket.blob(ofname)
+                    oblob.content_type="image/png"
                     with BytesIO() as f:
                         img.save(fp=f, format="png")
                         f.seek(0)
