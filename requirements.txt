@@ -1,8 +1,7 @@
-pytorch>=1.8.0
 fire>=0.4.0
 pytest
-google-cloud-python
+google.cloud.storage
 distro
 loguru
-pdf2images
+pdf2image
 tqdm
